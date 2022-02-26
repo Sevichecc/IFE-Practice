@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/******** TASK 01  ********/
+
+.task1 {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #bbbbbb;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(4, 200px);
+}
+
+.box1 {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.border1 {
+  border: 5px solid green;
+}
+
+.border2 {
+  border: 5px double green;
+}
+
+.border3 {
+  border: 5px dashed green;
+}
+.border4 {
+  border: 5px dotted green;
+}
+.border5 {
+  border: 20px groove green;
+}
+
+.border6 {
+  border: 20px ridge green;
+}
+.border7 {
+  border: 20px inset green;
+}
+.border8 {
+  border: 20px outset green;
+}
+
+/******** TASK 02  ********/
+
+.task2 {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.box2 {
+  border: 1px solid #777;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 20px 0;
+}
+
+.overline {
+  text-decoration: 2px overline #444;
+}
+
+.through {
+  text-decoration: 2px line-through #444;
+}
+
+.underline {
+  text-decoration: 2px underline #444;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.space {
+  letter-spacing: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+.px {
+  font-size: 20px;
+}
+
+.right {
+  text-align: right;
+}
+.em {
+  font-size: 2em;
+}
+.indent {
+  text-indent: 2em;
+}
