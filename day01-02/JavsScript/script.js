@@ -8,6 +8,11 @@ const height = 1.68;
 const BMI = Math.round(weight / height ** 2);
 console.log(`BMI:${BMI}`);
 
+let calcBMI = function (weight, height) {
+  return Math.floor(weight / Math.pow(height, 2));
+};
+
+console.log(calcBMI(78, 1.68));
 ///////////////////// TASK 02
 
 console.log(`——————————TASK 02`);
@@ -46,16 +51,22 @@ console.log(isNumeric(' ')); // ->false
 console.log(`——————————TASK 04`);
 
 function isUndefined(arg) {
-  const unCheck = typeof arg === 'undefined' ? 'true' : 'false';
+  const unCheck = isNaN(arg) ? true : false;
+
+  // const unCheck = arg === undefined ? true : false;
   return unCheck;
 }
 
 function isNull(arg) {
-  if (arg === null) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (arg === null) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  if (arg === 0) return false;
+  const nullCheck = Number(arg) === 0 ? true : false;
+  return nullCheck;
 }
 
 // 测试用例
@@ -68,6 +79,7 @@ console.log(isUndefined(expUndefined)); // ->true
 console.log(isUndefined(expNull)); // ->false
 console.log(isUndefined(a)); // ->true
 console.log(isUndefined(o)); // ->true
+/////////////////////////
 console.log(isNull(expUndefined)); // ->false
 console.log(isNull(expNull)); // ->true
 console.log(isNull(expZero)); // ->false
