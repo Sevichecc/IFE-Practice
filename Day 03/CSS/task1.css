@@ -1,0 +1,30 @@
+ /* 选中第一层列表，添加外边框 */
+ 
+ ul>li {
+     border: 1px solid #888;
+ }
+ /* 选中第二层列表，设置背景颜色为 #eee */
+ 
+ ul li>ol {
+     background-color: #eee;
+ }
+ /* 选中第三层列表，添加虚线外边框 */
+ 
+ ul ol ol {
+     border: 1px dashed #888;
+ }
+ /* 选中每一个列表的第一个列表项目设置字体为粗体，添加下边框，添加背景颜色为黑色，字体颜色为白色 */
+ 
+ ul li:first-child {
+     color: #fff;
+     font-weight: bold;
+     background-color: #000;
+     border-bottom: 1px solid red;
+ }
+ /* 选中第三层列表，给最后一个列表项 li，设置字体为斜体，字体为白色，添加背景颜色为黑色  */
+ 
+ ul ol ol li:last-child {
+     font-style: italic;
+     color: #fff;
+     background-color: #000;
+ }

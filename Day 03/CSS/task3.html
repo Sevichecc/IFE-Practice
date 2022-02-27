@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 链接文本的样式：使链接为红色，被访问后变为绿色，当被 hover 时，移除链接文本的下划线。 */
+        
+        a:link {
+            color: red;
+        }
+        
+        a:visited {
+            color: green;
+        }
+        
+        a:hover,
+         :active {
+            text-decoration: none;
+        }
+        /* 应用属性选择器选中链接 href 值中包含 contact 字段的 a 标签，设置下划线为粉红色 */
+        
+        a[href*="contact"] {
+            text-decoration: underline red;
+        }
+        /* 应用属性选择器选中链接 href 值中包含 以 http 字段开头的 a 标签，设置边框为蓝色 */
+        
+        a[href^="http"] {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://example.com">Link 1</a></li>
+        <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
+        <li><a href="/contact">Link 3</a></li>
+        <li><a href="../contact/index.html">Link 4</a></li>
+    </ul>
+    <input type='text'>
+</body>
+
+</html>

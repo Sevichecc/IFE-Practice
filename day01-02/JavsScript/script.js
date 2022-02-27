@@ -51,10 +51,15 @@ console.log(isNumeric(' ')); // ->false
 console.log(`——————————TASK 04`);
 
 function isUndefined(arg) {
-  const unCheck = isNaN(arg) ? true : false;
-
-  // const unCheck = arg === undefined ? true : false;
-  return unCheck;
+  if (typeof arg === 'undefined' || JSON.stringify(arg) == '{}') {
+    return true;
+  } else {
+    return false;
+  }
+  // f(JSON.stringify(c)=='{}
+  // const unCheck = Number.isNaN(arg) ? true : false;
+  // // //const unCheck = arg === undefined ? true : false;
+  // return unCheck;
 }
 
 function isNull(arg) {
@@ -67,6 +72,59 @@ function isNull(arg) {
   if (arg === 0) return false;
   const nullCheck = Number(arg) === 0 ? true : false;
   return nullCheck;
+  //  if (!arg && typeof arg !== "undefined" && arg !== 0) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+}
+
+// 测试用例
+var expUndefined = undefined;
+var expNull = null;
+var expZero = 0;
+// var expString = 'test';
+var a;
+var o = new Object();
+console.log(isUndefined(expUndefined)); // ->true
+console.log(isUndefined(expNull)); // ->false
+console.log(isUndefined(a)); // ->true
+console.log(isUndefined(o)); // ->true
+// console.log(isUndefined(expString));
+/////////////////////////
+console.log(isNull(expUndefined)); // ->false
+console.log(isNull(expNull)); // ->true
+console.log(isNull(expZero)); // ->false
+console.log(isNull(a)); // ->false
+console.log(isNull(o)); // ->false
+
+/*
+实现一个判断传入的参数是否为 undefined 类型
+返回一个布尔值，如果是undefied 为true，否之，为fase
+*/
+
+function isUndefined(arg) {
+  if (typeof arg === 'undefined' || JSON.stringify(arg) == '{}') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/*
+实现一个判断传入的参数是否为 null 类型
+返回一个布尔值，如果是null 为true，否之，为fase
+*/
+function isNull(arg) {
+  if (arg === 0) return false;
+  const nullCheck = Number(arg) === 0 ? true : false;
+  return nullCheck;
+
+  //  if (!arg && typeof arg !== "undefined" && arg !== 0) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 // 测试用例
@@ -79,7 +137,6 @@ console.log(isUndefined(expUndefined)); // ->true
 console.log(isUndefined(expNull)); // ->false
 console.log(isUndefined(a)); // ->true
 console.log(isUndefined(o)); // ->true
-/////////////////////////
 console.log(isNull(expUndefined)); // ->false
 console.log(isNull(expNull)); // ->true
 console.log(isNull(expZero)); // ->false
