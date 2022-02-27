@@ -34,10 +34,10 @@ setTimeout(() => {
 /////Task2
 
 const success = function() {
-    console.log(`体温正常，打卡成功！`);
+    document.write(`体温正常，打卡成功！`);
 }
 const fail = function() {
-    console.log(`体温异常，打卡失败！`);
+    document.write(`体温异常，打卡失败！`);
 }
 
 function temperatureBodyDetection(success, fail) {
