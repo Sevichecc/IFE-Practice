@@ -15,20 +15,23 @@ function showMessage2(name) {
 document.write(showMessage2('Jack'));
 
 //////////////////////////////函数表达式 & 回调函数
+
 //////Task 1
-const showMessage3 = function(name) {
-    return `\"hello,${name}3\"`;
-}
-console.log(showMessage3('Jack'));
+const showMessage = function(name) {
+        return `\"hello,${name}3\"`;
+    }
+    //1
+    // setTimeout(
+    //     (function(name) {
+    //         document.write(showMessage3(name));;
+    //     }), 1000, 'Jack')
 
-/////Task 2
+//2
+setTimeout(() => {
+    document.write(showMessage('Jack'));
+}, 1000);
 
-setTimeout(
-    (function(name) {
-        console.log(`\"hello,${name}\"`);
-    }), 1000, 'Jack')
-
-/////Task3
+/////Task2
 
 const success = function() {
     console.log(`体温正常，打卡成功！`);
