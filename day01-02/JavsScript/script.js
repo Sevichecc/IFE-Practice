@@ -51,7 +51,11 @@ console.log(isNumeric(' ')); // ->false
 console.log(`——————————TASK 04`);
 
 function isUndefined(arg) {
-  if (typeof arg === 'undefined' || JSON.stringify(arg) == '{}') {
+  if (
+    typeof arg === 'undefined' ||
+    JSON.stringify(arg) == '{}' ||
+    JSON.stringify(arg) == '[]'
+  ) {
     return true;
   } else {
     return false;
