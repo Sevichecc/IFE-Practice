@@ -3,14 +3,14 @@
 //////TASK 1
 
 function showMessage1() {
-    return "\"hello,stranger!\"";
+    return "hello,stranger!";
 }
 console.log(showMessage1());
 
 ///////TASK 2
 
 function showMessage2(name) {
-    return `\"hello,${name}!\"`;
+    return `hello,${name}!`;
 }
 document.write(showMessage2('Jack'));
 
@@ -18,13 +18,14 @@ document.write(showMessage2('Jack'));
 
 //////Task 1
 const showMessage = function(name) {
-        return `\"hello,${name}3\"`;
+        return `hello,${name}3`;
     }
-    //1
-    // setTimeout(
-    //     (function(name) {
-    //         document.write(showMessage3(name));;
-    //     }), 1000, 'Jack')
+    
+//1
+// setTimeout(
+//     (function(name) {
+//         document.write(showMessage3(name));;
+//     }), 1000, 'Jack')
 
 //2
 setTimeout(() => {
