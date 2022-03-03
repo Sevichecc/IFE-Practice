@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background-color: #e9e9e9;
+    }
+
+    #content {
+      margin: 30px;
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 50px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      grid-column: 1/-1;
+    }
+
+    #content div:first-of-type {
+      color: #fff;
+      background-color: cornflowerblue;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      line-height: 200px;
+      text-align: center;
+    }
+
+    .text {
+      color: #fff;
+    }
+
+    #content div:nth-child(3) {
+      border-right: 100px solid yellow;
+      border-bottom: 100px solid green;
+      border-left: 100px solid blue;
+      border-top: 100px solid red;
+      width: 0;
+      height: 0;
+      display: flex;
+      line-height: 0;
+      justify-content: center;
+    }
+
+    #content div:last-of-type {
+      border: 50px solid orange;
+      border-radius: 100%;
+      width: 0;
+      height: 0;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+      line-height: 0px;
+    }
+  </style>
+
+  <title>Task 2</title>
+</head>
+
+<body>
+  <div id="content">
+    <h1>CSS TEMPLATES using border radius</h1>
+    <div>Blue</div>
+    <div><span class="text">TRIANGLE</span></div>
+    <div>Red</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+</head>
+
+<body>
+    <label>请输入您的身高:</label><input type="text">
+    <br>
+    <label>请输入您的体重:</label><input type="text">
+    <br>
+    <button>开始测量您的体型</button>
+    <p id="result"></p>
+    <script />
+        const input = document.querySelectorAll('input');
+        const btn = document.querySelector('button');
+        const result = document.getElementById('result');
+
+        btn.addEventListener('click', function () {
+        let height = Number(input[0].value);
+        let weight = Number(input[1].value);
+        let bmi = weight / height ** 2;
+
+        // if else
+        if (bmi < 18.5) {
+            result.textContent = '您是偏瘦体型，保持的不错哟咯';
+        } else if (bmi < 25 && bmi > 18.5) {
+            result.textContent = '您是标准体型，保持的不错哟咯';
+        } else if (bmi < 28 && bmi > 25) {
+            result.textContent = '您是微胖体型，可以多吃粗粮，让饮食结构更加健康吧！';
+        } else if (bmi < 32 && bmi > 28) {
+            result.textContent = '您是肥胖体型，管住嘴迈开腿开始减肥吧！';
+        } else if (bmi > 32) {
+            result.textContent =
+            '您是过重体型，已经影响健康了，需要重视自己的饮食管理了';
+        }
+        
+        // switch
+      switch(true){
+          case bmi < 18.5:
+            result.textContent = '您是偏瘦体型，保持的不错哟咯';
+            break;
+          case bmi < 25 && bmi > 18.5:
+            result.textContent = '您是标准体型，保持的不错哟咯';
+            break;
+          case bmi < 28 && bmi > 25:
+            result.textContent = '您是微胖体型，可以多吃粗粮，让饮食结构更加健康吧！';
+            break;
+          case bmi < 32 && bmi > 28:
+            result.textContent = '您是肥胖体型，管住嘴迈开腿开始减肥吧！';
+            break;
+          case bmi > 32:
+             result.textContent =
+              '您是过重体型，已经影响健康了，需要重视自己的饮食管理了';
+        }    
+        }
+
+    
+        
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+  <style>
+    div {
+      width: 100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      text-align: center;
+    }
+
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 40px;
+      color: #fff;
+    }
+
+    /* Default */
+    div a:first-child:link,
+    a:first-child:visited {
+      background-color: #fff;
+      color: #777;
+      box-shadow: inset 0 0 0 2px #dddddd;
+    }
+
+    div a:first-child:hover {
+      background-color: #ddd;
+    }
+
+    div a:first-child:active {
+      background-color: #bdbdbd;
+      box-shadow: inset 0 0 0 2px #bdbdbd;
+    }
+
+    /* Danger */
+    div a:nth-child(2):link,
+    a:nth-child(2):visited {
+      background-color: #ee6565;
+      box-shadow: inset 0 0 0 2px #ee6565;
+    }
+
+    div a:nth-child(2):hover {
+      background-color: #c44c4c;
+      box-shadow: inset 0 0 0 2px #c44c4c;
+    }
+
+    div a:nth-child(2):active {
+      background-color: #c44c4c;
+
+    }
+
+    /* Success */
+    div a:nth-child(3):link,
+    a:nth-child(3):visited {
+      background-color: #65a5ee;
+      box-shadow: inset 0 0 0 2px #65a5ee;
+    }
+
+    div a:nth-child(3):hover {
+      background-color: #88b8f0;
+      box-shadow: inset 0 0 0 2px #88b8f0;
+    }
+
+    div a:nth-child(3):active {
+      background-color: #538ed1;
+      box-shadow: inset 0 0 0 2px #538ed1;
+    }
+
+    /* Info */
+    div a:nth-child(4):link,
+    a:nth-child(4):visited {
+      background-color: #fff;
+      color: #8ae0bf;
+      box-shadow: inset 0 0 0 2px #8ae0bf;
+    }
+
+    div a:nth-child(4):hover {
+      background-color: #8ae0bf;
+      color: #fff;
+    }
+
+    div a:nth-child(4):active {
+      background-color: #6cc0a0;
+      box-shadow: inset 0 0 0 2px #6cc0a0;
+    }
+
+    /* Warning*/
+    div a:nth-child(5):link,
+    a:nth-child(5):visited {
+      background-color: #fff;
+      color: #ffbe47;
+      box-shadow: inset 0 0 0 2px #ffbe47;
+    }
+
+    div a:nth-child(5):hover {
+      background-color: #ffbe47;
+      color: #fff;
+    }
+
+    div a:nth-child(5):active {
+      background-color: #e7a834;
+      box-shadow: inset 0 0 0 2px #e7a834;
+    }
+
+    /* Primary*/
+    div a:nth-child(6):link,
+    a:nth-child(6):visited {
+      background-color: #3fc582;
+      box-shadow: inset 0 0 0 2px #3fc582;
+    }
+
+    div a:nth-child(6):hover {
+      background-color: #4bd490;
+      box-shadow: inset 0 0 0 2px #4bd490;
+    }
+
+    div a:nth-child(6):active {
+      background-color: #32a86d;
+      box-shadow: inset 0 0 0 2px #32a86d;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="#">Default</a>
+    <a href="#">Danger</a>
+    <a href="#">Success</a>
+    <a href="#">Info</a>
+    <a href="#">Warning</a>
+    <a href="#">Primary</a>
+  </div>
+
+</html>
