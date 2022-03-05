@@ -1,13 +1,15 @@
 # IFE-Practice
+
 百度前端学院练习
 http://ife.baidu.com/
 
-开始日期：2022/2/25 
+开始日期：2022/2/25
 
 ## Day 01-02
+
 - HTML:[文字高级格式化——博文](http://ife.baidu.com/htmlpart/text.html)
 
-- CSS: [给你的简历增添一些色彩|编码只做1and2 ](http://ife.baidu.com/csspart/styleCv.html)
+- CSS: [给你的简历增添一些色彩|编码只做 1and2 ](http://ife.baidu.com/csspart/styleCv.html)
 
 - JavaScript:[Javascript 基础知识（一）](http://ife.baidu.com/javascript/datatype&variable.html#null-%E5%92%8C-undefined)
 
@@ -26,3 +28,10 @@ http://ife.baidu.com/
 - CSS:[制作一些有趣的效果](http://ife.baidu.com/csspart/playWithCss.html)
 
 - JavaScript:[“如果” 可以 “重来”](http://ife.baidu.com/javascript/if&while.html)
+
+## Day07-08
+
+- CSS:[让盒子浮动起来吧](http://ife.baidu.com/csspart/float.html)
+- JavaScript:
+  - [字符串](http://ife.baidu.com/javascript/string.html#%E5%AD%97%E7%AC%A6%E4%B8%B2)
+  - [JavaScript 数组基础](http://ife.baidu.com/javascript/arrayBasic.html)
