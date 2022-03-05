@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水仙花数判断</title>
+</head>
+
+<body>
+  <label>请输需要判断的水仙花数(三位数):</label><input type="text">
+  <br>
+  <button>开始判断</button>
+  <script>
+    const btn = document.querySelector('button');
+
+    function numDaffodils() {
+      let num = document.querySelector('input').value;
+
+      //输入的是字符串
+      // console.log(typeof num); =>string
+
+      // 检查是否是有效数字
+      if (num.startsWith('0') || num.length !== 3 || isNaN(num))
+        alert('请输入三位有效数字');
+
+      // 拆分为数组
+      let numArr = num.split('');
+      const numCheck = numArr.reduce((acc, value) => acc + Math.pow(value, 3), 0);
+
+      //判断是不是水仙花数字！
+      numCheck == num ? alert('是水仙花数 ✅') : alert('不是水仙花数❗️');
+    }
+
+    btn.addEventListener('click', numDaffodils);
+
+  </script>
+</body>
+
+</html>
