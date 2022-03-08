@@ -29,6 +29,7 @@
     let plain = document.querySelector('input[name=plain');
     let enc = document.querySelector('input[name=enc]');
 
+    // 加密
     function encrypt() {
       let offset = Number(offsetInput.value);
       function conver(s) {
@@ -48,6 +49,7 @@
       enc.value = plain.value.replace(/([A-Z])|([a-z])/g, conver);
     }
 
+    // 解密
     function decrypt() {
       let offset = Number(offsetInput.value);
       function conver(s) {
