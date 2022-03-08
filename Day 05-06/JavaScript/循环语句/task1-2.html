@@ -30,17 +30,21 @@
       while (decNumber !== 0) {
         remainder = decNumber % 2;
         decNumber = parseInt(decNumber / 2);
-        bin.push(remainder);
+        bin.unshift(remainder);
       }
       let binNumber = bin.join('');
 
       // Task2
       let binBit = Number(document.querySelector('#bin-bit').value);
-      if (binNumber.length <= binBit) {
+
+      if (binNumber.length >= binBit) {
         binNumber = binNumber.slice(0, binBit + 1);
       } else {
-        console.error(`所得二进制数字位数小于输入位数`);
+         binNumber = binNumber.padStart(binBit,'0')
       }
+      // else{
+      //   console.error(`所得二进制数字位数小于输入位数`);
+      // }
 
       result.innerHTML = `运算结果：${binNumber}`;
     }
