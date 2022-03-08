@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task01-02</title>
+  <style>
+    body {
+      background-color: rgb(212, 233, 236);
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>JavaScript da07-08 Task3</h1>
+  <div>
+    <label>偏移:</label><input type="text" name="offset" size=5 value="3"><br>
+    <label>明文:<label></label><input type="text" name="plain" size=50 value="This is a test."><br>
+      <label>密文:</label><input type="text" name="enc" size=50><br>
+      <input type="button" value="加密" onClick="encrypt()">&nbsp;
+      <input type="button" value="解密" onClick="decrypt()">
+  </div>
+  <script />
+    let offsetInput = document.querySelector('input[name=offset]');
+    let plain = document.querySelector('input[name=plain');
+    let enc = document.querySelector('input[name=enc]');
+
+    function encrypt() {
+      let offset = Number(offsetInput.value);
+      function conver(s) {
+        let charCode = s.charCodeAt(0);
+        // 替换大写字母 A-Z:65-90
+        if (charCode <= 90 && charCode >= 65) {
+          return String.fromCharCode(
+            charCode + offset < 90 ? charCode + offset : charCode - offset
+          );
+        } else {
+          //替换小写字母 a-z:97-122
+          return String.fromCharCode(
+            charCode + offset < 122 ? charCode + offset : charCode - offset
+          );
+        }
+      }
+      enc.value = plain.value.replace(/([A-Z])|([a-z])/g, conver);
+    }
+
+    function decrypt() {
+      let offset = Number(offsetInput.value);
+      function conver(s) {
+        let charCode = s.charCodeAt(0);
+        // 替换大写字母 A-Z:65-90
+        if (charCode <= 90 && charCode >= 65) {
+          return String.fromCharCode(
+            charCode - offset < 65 ? charCode + offset : charCode - offset
+          );
+        } else {
+          //替换小写字母 a-z:97-122
+          return String.fromCharCode(
+            charCode - offset < 97 ? charCode + offset : charCode - offset
+          );
+        }
+      }
+      plain.value = enc.value.replace(/([A-Z])|([a-z])/g, conver);
+    }
+  </script>
+</body>
+
+</html>
