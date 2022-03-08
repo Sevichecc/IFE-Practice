@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    article {
+      background-color: #eee;
+      overflow: auto;
+      box-shadow: 2px 2px 2px 1px rgba(90, 90, 90, 0.2);
+      padding: 1rem;
+    }
+
+    img {
+      object-fit: cover;
+      float: left;
+      margin-right: 1rem;
+    }
+
+    /* 清除浮动 */
+    article div:last-of-type {
+      clear: both;
+    }
+  </style>
+
+  <title>Task2</title>
+</head>
+
+<body>
+  <!--图片设置固定宽度 练习溢出处理-->
+  <article style="width:600px;height:300px">
+    <div>
+      <!--图片设置固定大小为170像素 练习图片处理-->
+      <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/mountain.jpg" style="width:170px;height:170px;" />
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+      vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+      tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel,
+      viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+      Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+      fermentum sapien.
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere
+      sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+      urna
+      eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </div>
+  </article>
+</body>
+
+</html>
