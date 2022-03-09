@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task01-2</title>
+  <style>
+    body {
+      background-color: rgb(212, 233, 236);
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <label>请输入num1：</label><input type="text"><br>
+  <label>请输入num2：</label><input type="text"><br>
+  <button>相加</button><br>
+  <button>相乘</button><br>
+  <label>结果:</label><input id="result" type="text">
+  <script>
+    const input = document.querySelectorAll('input');
+    const btn = document.querySelectorAll('button');
+    const [btnAdd, btnMul] = [...btn];
+    const result = document.querySelector('#result');
+    let num;
+
+    /////////相加
+    function largeNumAdd() {
+      let num1 = input[0].value;
+      let num2 = input[1].value;
+
+      // 输入验证，0-9的数字，且开头不为0
+      if (
+        num1.startsWith(0) ||
+        num2.startsWith(0) ||
+        isNaN(+num1) ||
+        isNaN(+num2) ||
+        !Number.isInteger(+num1) ||
+        !Number.isInteger(+num2)
+      )
+        return alert('请输入0-9组成的整数，且开头不能为0');
+
+      if (Number.isSafeInteger(num1) && Number.isSafeInteger(num2)) {
+        num = Number(num1) + Number(num2);
+      } else {
+        num = BigInt(num1) + BigInt(num2);
+      }
+      //这样也可以，但不太严谨：
+      // let num = Number(num1) + Number(num2);
+      // num = Number.isSafeInteger(num) ? Math.trunc(num) : BigInt(num);
+      return (result.value = num);
+    }
+
+    /*测试用例
+    largeNumAdd('11', '123'); //->"134"
+    largeNumAdd('235656', '746433225'); //->""746668881""
+    largeNumAdd('3456786543355', '222222234567778'); //->"225679021111133"*/
+
+    ////////相乘
+    function multiply() {
+      let num1 = input[0].value;
+      let num2 = input[1].value;
+
+      if (
+        num1.startsWith(0) ||
+        num2.startsWith(0) ||
+        isNaN(+num1) ||
+        isNaN(+num2) ||
+        !Number.isInteger(+num1) ||
+        !Number.isInteger(+num2)
+      )
+        return alert('请输入0-9组成的整数，且开头不能为0');
+
+      if (Number.isSafeInteger(num1) && Number.isSafeInteger(num2)) {
+        num = Number(num1) * Number(num2);
+      } else {
+        num = BigInt(num1) * BigInt(num2);
+      }
+      return (result.value = num);
+    }
+
+    /*测试用例
+    multiply("23""4") ->"92"
+    multiply("235""263645") ->"61956575"
+    multiply("2453465476867978""4756867978080890909") ->"11670811362240247334432453213412002" */
+
+    btnAdd.addEventListener('click', largeNumAdd);
+    btnMul.addEventListener('click', multiply);
+
+  </script>
+</body>
+
+</html>
