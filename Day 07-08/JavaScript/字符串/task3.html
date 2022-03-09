@@ -46,7 +46,7 @@
           );
         }
       }
-      enc.value = plain.value.replace(/([A-Z])|([a-z])/g, conver);
+      enc.value = plain.value.replace(/[A-Za-z]/g, conver);
     }
 
     // 解密
@@ -66,7 +66,7 @@
           );
         }
       }
-      plain.value = enc.value.replace(/([A-Z])|([a-z])/g, conver);
+      plain.value = enc.value.replace(/[A-Za-z]/g, conver);
     }
   </script>
 </body>
