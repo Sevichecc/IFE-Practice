@@ -35,3 +35,12 @@ http://ife.baidu.com/
 - JavaScript:
   - [字符串](http://ife.baidu.com/javascript/string.html#%E5%AD%97%E7%AC%A6%E4%B8%B2)
   - [JavaScript 数组基础](http://ife.baidu.com/javascript/arrayBasic.html)
+
+## Day09-10
+
+- CSS:
+  - 题目：[浮动实战任务](http://ife.baidu.com/csspart/floatTask.html)
+  - 我的 Demo:[Forty](https://forty-seviche.netlify.app/)
+- JavaScript:
+  - [JavaScript 数组基础](http://ife.baidu.com/javascript/arrayBasic.html)
+  - [灵活的操作 JavaScript 数组](http://ife.baidu.com/javascript/arrayMethods.html)
