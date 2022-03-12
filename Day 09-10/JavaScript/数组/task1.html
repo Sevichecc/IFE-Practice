@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task01</title>
+  <style>
+    body {
+      background-color: rgb(212, 233, 236);
+      text-align: center;
+    }
+  </style>
+  <script>
+
+    // 总分数
+    let scores = ['88', '90', '100', '45', '60', '98', '32', '99', '80'];
+    function getTotalScore(scores) {
+      let result = scores.reduce((sum, score) => sum + Number(score), 0);
+      // console.log(result);
+      return result;
+    }
+    getTotalScore(scores);
+
+    // 平均分
+    function getAverageScore(scores) {
+      let sum = getTotalScore(scores);
+      const average = Math.trunc(sum / scores.length);
+      // console.log(average);
+      return average;
+    }
+    getAverageScore(scores)
+
+    // 挂科
+    function getFailScores(scores) {
+      const result = scores.filter(score => score <= 60)
+      // console.log(result);
+      return result;
+
+    }
+    getFailScores(scores);
+
+    //加5分
+    function getAddFiveScores(scores) {
+      const result = scores.map(score => {
+        score = Number(score);
+        return score + 5 > 100 ? 100 : score + 5;
+      })
+      // console.log(result);
+    }
+    getAddFiveScores(scores)
+
+    //奖学金
+    function getPrize(scores) {
+      const prize = scores.filter(scores => scores > 90).reduce((sum, cur, i, arr) => sum * arr.length)
+      // console.log(prize);
+    }
+    getPrize(scores)
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript Day09-10 数组</h1>
+</body>
+
+</html>
