@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task03</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <input id="stack-input" type="text">
+  <p id="stack-cont">栈内容：apple-&gt;pear</p>
+  <button id="push-btn">进栈</button>
+  <button id="pop-btn">退栈</button>
+  <button id="front-btn">打印栈顶元素内容</button>
+  <button id="empty-btn">判断栈是否为空</button>
+
+  <script>
+    const btnPush = document.querySelector('#push-btn');
+    const btnPop = document.querySelector('#pop-btn');
+    const btnFront = document.querySelector('#front-btn');
+    const btnEmpty = document.querySelector('#empty-btn');
+    const stackCont = document.querySelector('#stack-cont')
+    const input = document.querySelector('#stack-input');
+    var stack = ["apple", "pear"];
+    // 入栈
+    btnPush.addEventListener('click', () => {
+      stack.push(input.value);
+      stackCont.innerHTML = `队列内容：${stack.join('-&gt;')}`
+    })
+
+    // 出栈
+    btnPop.addEventListener('click', () => {
+      stack.pop(stack.at(-1))
+      stackCont.innerHTML = `队列内容：${stack.join('-&gt;')}`
+    })
+
+    // 打印栈顶元素
+    btnFront.addEventListener('click', () => {
+      stackCont.innerHTML = `栈顶：${stack.at(-1)}`
+    })
+
+    //判空
+    btnEmpty.addEventListener('click', () => {
+      stackCont.innerHTML = stack.length === 0 ?
+        '栈为空' : '栈不为空'
+    })
+
+  </script>
+</body>
+
+</html>
