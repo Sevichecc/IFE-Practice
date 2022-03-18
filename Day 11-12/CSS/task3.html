@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-size: 2rem;
+      padding: 20px;
+      position: relative;
+
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+      height: 4rem;
+    }
+
+    nav {
+      background-color: rgb(26, 26, 26);
+      display: flex;
+      gap: 20px;
+      flex: 1;
+      width: 100%;
+      height: 4rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 100px;
+    }
+
+    section:nth-of-type(2n) {
+      background-color: rgb(202, 202, 202);
+    }
+  </style>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">LOGO</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">blog</a>
+      <a href="#">article</a>
+      <a href="#">contact me</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio expedita cumque consequuntur consequatur sequi
+      placeat esse earum! Corrupti dolorum quos voluptatem consequuntur odit, velit explicabo praesentium fugiat
+      repudiandae sed. Quam.</p>
+  </section>
+
+  <section>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio expedita cumque consequuntur consequatur sequi
+      placeat esse earum! Corrupti dolorum quos voluptatem consequuntur odit, velit explicabo praesentium fugiat
+      repudiandae sed. Quam.</p>
+  </section>
+
+  <section>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio expedita cumque consequuntur consequatur sequi
+      placeat esse earum! Corrupti dolorum quos voluptatem consequuntur odit, velit explicabo praesentium fugiat
+      repudiandae sed. Quam.</p>
+  </section>
+
+  <section>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio expedita cumque consequuntur consequatur sequi
+      placeat esse earum! Corrupti dolorum quos voluptatem consequuntur odit, velit explicabo praesentium fugiat
+      repudiandae sed. Quam.</p>
+  </section>
+  <script>
+    const logo = document.querySelector(".logo");
+    const nav = document.querySelector("nav")
+
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) nav.classList.add('sticky');
+        else nav.classList.remove('sticky');
+      },
+      {
+        // In the viewport
+        root: null,
+        threshold: 0,
+        rootMargin: "-20px",
+      }
+    );
+    obs.observe(logo);
+  </script>
+</body>
+
+</html>
