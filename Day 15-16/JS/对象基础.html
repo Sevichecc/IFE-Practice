@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    const bankAcount = {
+      name: 'John',
+      balance: 1000000,
+      rank: 1,
+      interestRatePercent: 0.1,
+
+      deposit(amount) {
+        this.balance += amount
+      },
+
+      withdraw(amount) {
+        this.balance += amount
+      },
+
+      printAccountInfo() {
+        console.log(`您的存款总值：￥${this.balance} ,您的财富排名为：${this.rank}，您的银行利率为：${this.interestRatePercent * 100}%`)
+      },
+    }
+
+    const checkVip = function (obj) {
+      return obj.vip ? true : false
+    }
+
+    const bankAcountProperty = function (obj) {
+      for (const [key, value] of Object.entries(obj)) {
+        console.log(`key:${key}\nValue: ${value}`);
+      }
+    }
+
+    function isEmpty(obj) {
+      return Object.keys(obj).length === 0 ? true : false
+    }
+
+    console.log(bankAcount);
+    bankAcount.printAccountInfo();
+    console.log(checkVip(bankAcount));
+    bankAcountProperty(bankAcount);
+    console.log(isEmpty(bankAcount));
+
+  </script>
+
+  <title>对象</title>
+</head>
+
+<body>
+  <h1>JS 一个重要数据结构：对象</h1>
+</body>
+
+</html>
